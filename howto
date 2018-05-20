@@ -1,0 +1,20 @@
+- Se alterar algo no .g4 tem que compilar de novo para gerar as classes:
+$ cd /usr/local/lib
+$ curl -O http://www.antlr.org/download/antlr-4.5-complete.jar
+$ export CLASSPATH=".:/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH"
+$ alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.5-complete.jar:$CLASSPATH" org.antlr.
+v4.Tool'
+$ cd /tmp
+$ antlr4 gramatica.g4
+
+substituir as classes antigas pelas geradas com a nova versão (menos a LPtoPython e Translate).
+
+- Abrir projeto no netbeans
+- Setar o arquivo de entrada com as instruções em TauraLang
+- Compilar o projeto
+
+- Simulador:
+Abrir a pasta do simulador
+Simulação do mundo - $ python3 WorldSimulation.py
+Simulação IA - $ python3 nomedoarquivogerado.py
+
